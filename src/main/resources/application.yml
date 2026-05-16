@@ -9,21 +9,17 @@ username: ${SPRING_DATASOURCE_USERNAME:postgres}
 password: ${SPRING_DATASOURCE_PASSWORD:postgres}
 
 jpa:
-open-in-view: false
-
-
-hibernate:
+ open-in-view: false
+ hibernate:
   ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
-
-show-sql: false
-
-properties:
+ show-sql: false
+ properties:
   hibernate:
     format_sql: true
 
     jdbc:
       lob:
-        non_contextual_creation: true
+  non_contextual_creation: true
 
 
 jackson:
