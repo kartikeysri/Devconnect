@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: devconnect-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeploy: true
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: APP_CORS_ALLOWED_ORIGINS
+        value: http://localhost:5173,http://127.0.0.1:5173,https://*.vercel.app

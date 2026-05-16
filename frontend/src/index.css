@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #f8fbff;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at top left, rgba(255, 122, 89, 0.18), transparent 28%), radial-gradient(circle at 85% 5%, rgba(78, 205, 196, 0.14), transparent 24%), linear-gradient(180deg, #f8fbff 0%, #eef6ff 50%, #fdf7ef 100%);
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border border-white/70 bg-white/85 shadow-panel backdrop-blur;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition duration-200 focus:border-coral focus:ring-4 focus:ring-coral/15;
+  }
+
+  .field-with-icon {
+    @apply w-full rounded-2xl border border-slate-200 bg-white pl-4 pr-14 py-3 text-slate-900 outline-none transition duration-200 focus:border-coral focus:ring-4 focus:ring-coral/15;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-ink px-5 py-3 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-slate-900 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 font-semibold text-slate-800 transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50;
+  }
+
+  .tag-chip {
+    @apply rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700;
+  }
+}
