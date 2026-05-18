@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 
 import HomePage from './pages/Homepage';
+import DiscoveryPage from './pages/DiscoveryPage';
 import HomeFeedPage from './pages/HomeFeedPage';
 import LoginPage from './pages/LoginPage';
 import ProfilePage from './pages/ProfilePage';
@@ -28,6 +29,31 @@ export default function App() {
       <Route
         path="/"
         element={<HomePage />}
+      />
+
+      <Route
+        path="/articles"
+        element={<DiscoveryPage sectionKey="articles" />}
+      />
+
+      <Route
+        path="/developers"
+        element={<DiscoveryPage sectionKey="developers" />}
+      />
+
+      <Route
+        path="/projects"
+        element={<DiscoveryPage sectionKey="projects" />}
+      />
+
+      <Route
+        path="/learning"
+        element={<DiscoveryPage sectionKey="learning" />}
+      />
+
+      <Route
+        path="/community"
+        element={<DiscoveryPage sectionKey="community" />}
       />
 
       {/* LOGIN */}
